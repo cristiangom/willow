@@ -25,7 +25,7 @@ bot.on('message', (message) => {
             //Pues no se me ocurrio nada mas
         } else {
             
-            var reglamento = message.member.guild.channels.find('id','419575498427858944');
+             var reglamento = message.member.guild.channels.find('name','reglamento');
             
             if (message.content == '.soyArticuno'){
                     var role = message.member.guild.roles.find('name','Articuno');    
