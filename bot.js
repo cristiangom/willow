@@ -37,38 +37,38 @@ bot.on('message', (message) => {
                     var role = message.member.guild.roles.find('name','Articuno');    
                     message.member.addRole(role);
                     message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","articuno").send("https://cdn.discordapp.com/attachments/416329673631334429/420041376881836033/Team_Mystic2.png");
-                    message.member.guild.channels.find("name","articuno").send("¡" + message.member.user + " pone los <:cebo:419958620692807691>!, saluda a los demás miembros de tu equipo.");
+                    message.member.guild.channels.find("name","articuno").send("¡" + message.member.user + " pone los <:cebos:420655324551184405>!, saluda a los demás miembros de tu equipo.");
             }        
              if (message.content == '.soyZapdos'){
                     var role = message.member.guild.roles.find('name','Zapdos');
                     message.member.addRole(role).catch(console.error);
                     message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","zapdos").send("https://cdn.discordapp.com/attachments/416329673631334429/420041305188466689/Team_Instinct2.png");
-                    message.member.guild.channels.find("name","zapdos").send("¡" + message.member.user + " pone los <:cebo:419958620692807691>!, saluda a los demás miembros de tu equipo.");
+                    message.member.guild.channels.find("name","zapdos").send("¡" + message.member.user + " pone los <:cebos:420655324551184405>!, saluda a los demás miembros de tu equipo.");
                     
             }
             if (message.content == '.soyMoltres'){
                     var role = message.member.guild.roles.find('name','Moltres');
                     message.member.addRole(role).catch(console.error);
                     message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","moltres").send("https://cdn.discordapp.com/attachments/416329673631334429/420041466019184640/Team_Valor2.png");
-                    message.member.guild.channels.find("name","moltres").send("¡" + message.member.user + " pone los <:cebo:419958620692807691>!, saluda a los demás miembros de tu equipo.");
+                    message.member.guild.channels.find("name","moltres").send("¡" + message.member.user + " pone los <:cebos:420655324551184405>!, saluda a los demás miembros de tu equipo.");
             }
             if (message.content == '.soySuicune'){
                     var role = message.member.guild.roles.find('name','Suicune');
                     message.member.addRole(role).catch(console.error);
                     message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","suicune").send("https://cdn.discordapp.com/attachments/416329673631334429/420041433362333706/Team_Suicune2.png");
-                    message.member.guild.channels.find("name","suicune").send("¡" + message.member.user + " pone los <:cebo:419958620692807691>!, saluda a los demás miembros de tu equipo.");
+                    message.member.guild.channels.find("name","suicune").send("¡" + message.member.user + " pone los <:cebos:420655324551184405>!, saluda a los demás miembros de tu equipo.");
             }
             if (message.content == '.soyRaikou'){
                     var role = message.member.guild.roles.find('name','Raikou');
                     message.member.addRole(role).catch(console.error);
                     message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","raikou").send("https://cdn.discordapp.com/attachments/416329673631334429/420041398486827010/Team_Raikou2.png");
-                    message.member.guild.channels.find("name","raikou").send("¡" + message.member.user + " pone los <:cebo:419958620692807691>!, saluda a los demás miembros de tu equipo.");
+                    message.member.guild.channels.find("name","raikou").send("¡" + message.member.user + " pone los <:cebos:420655324551184405>!, saluda a los demás miembros de tu equipo.");
             }
             if (message.content == '.soyEntei'){
                     var role = message.member.guild.roles.find('name','Entei');
                     message.member.addRole(role).catch(console.error);
                     message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");       message.member.guild.channels.find("name","entei").send("https://cdn.discordapp.com/attachments/416329673631334429/420041235626065920/Team_Entei2.png");
-                    message.member.guild.channels.find("name","entei").send("¡" + message.member.user + " pone los <:cebo:419958620692807691>!, saluda a los demás miembros de tu equipo.");
+                    message.member.guild.channels.find("name","entei").send("¡" + message.member.user + " pone los <:cebos:420655324551184405>!, saluda a los demás miembros de tu equipo.");
             }
         }
         
