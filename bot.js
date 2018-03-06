@@ -36,9 +36,9 @@ bot.on('message', (message) => {
             if (message.content == '.soyArticuno'){
                     var role = message.member.guild.roles.find('name','Articuno');    
                     message.member.addRole(role);
-                    message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","articuno").send("https://cdn.discordapp.com/attachments/416329673631334429/420041376881836033/Team_Mystic2.png \n ¡" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.");
-                    //);
-                    /*message.member.guild.channels.find("name","articuno").send(*/
+                    message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   //message.member.guild.channels.find("name","articuno").send("https://cdn.discordapp.com/attachments/416329673631334429/420041376881836033/Team_Mystic2.png \n ¡" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.");
+                    //); 
+                    message.member.guild.channels.find("name","articuno").sendFile("https://cdn.discordapp.com/attachments/416329673631334429/420041376881836033/Team_Mystic2.png \n ¡", "a", "!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.")
             }        
              if (message.content == '.soyZapdos'){
                     var role = message.member.guild.roles.find('name','Zapdos');
@@ -99,13 +99,13 @@ bot.on('message', (message) => {
             message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
         }
         if(message.content == ".exDamianCarmona" && !message.member.roles.some(r=>["ex-DamianC"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-Damian-Carmona');
+            var grupo = message.member.guild.channels.find('name','ex-damian-carmona');
             var role = message.member.guild.roles.find('name','ex-DamianC');
             message.member.addRole(role);
             message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
         }
         if(message.content == ".exEuphoriaSymmetrica" && !message.member.roles.some(r=>["ex-Euphoria"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-euphoria-simmetryca');
+            var grupo = message.member.guild.channels.find('name','ex-euphoria-symmetrica');
             var role = message.member.guild.roles.find('name','ex-Euphoria');
             message.member.addRole(role);
             message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
@@ -140,7 +140,7 @@ bot.on('message', (message) => {
             message.member.addRole(role);
             message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
         }
-        if(message.content == ".exSantaMaría" && !message.member.roles.some(r=>["ex-SantaMaria"].includes(r.name) )){
+        if(message.content == ".exSantaMaria" && !message.member.roles.some(r=>["ex-SantaMaria"].includes(r.name) )){
             var grupo = message.member.guild.channels.find('name','ex-santa-maria');
             var role = message.member.guild.roles.find('name','ex-SantaMaria');
             message.member.addRole(role);
