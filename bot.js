@@ -7,9 +7,9 @@ bot.on('ready', () => {
 });
 
 bot.on("guildMemberAdd", (member) => {
-  //console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
-  //member.guild.channels.get("welcome").send(`"${member.user.username}" has joined this server`);
-   member.guild.channels.find("name","yo-te-elijo").send("Hola bienvenido al servidor de PokémonGO-Querétaro.\nAntes de empezar necesitas elegir a qué facción perteneces de acuerdo a tu forma de juego para ver los demás canales y así empezar tu aventura. Es importante que decidas bien para que puedas aprovechar al máximo el grupo.\nEscribe: \n`.soyArticuno` si eres del equipo __Sabiduría__ y juegas de forma __aérea__. \n`.soyZapdos` si eres del equipo __Instinto__ y juegas de forma __aérea__. \n`.soyMoltres` si eres del equipo __Valor__ y juegas de forma __aérea__. \n`.soySuicune` si eres del equipo __Sabiduría__ y juegas de forma __presencial__. \n`.soyRaikou` si eres del equipo __Instinto__ y juegas de forma __presencial__. \n`.soyEntei` si eres del equipo __Valor__ y juegas de forma __presencial__.");
+    setTimeout(() => { 
+        member.guild.channels.find("name","yo-te-elijo").send("Hola " + member.user + ", bienvenido al servidor de PokémonGO-Querétaro.\nAntes de empezar necesitas elegir a qué facción perteneces de acuerdo a tu forma de juego para ver los demás canales y así empezar tu aventura. Es importante que decidas bien para que puedas aprovechar al máximo el grupo.\nEscribe: \n`.soyArticuno` si eres del equipo __Sabiduría__ y juegas de forma __aérea__. \n`.soyZapdos` si eres del equipo __Instinto__ y juegas de forma __aérea__. \n`.soyMoltres` si eres del equipo __Valor__ y juegas de forma __aérea__. \n`.soySuicune` si eres del equipo __Sabiduría__ y juegas de forma __presencial__. \n`.soyRaikou` si eres del equipo __Instinto__ y juegas de forma __presencial__. \n`.soyEntei` si eres del equipo __Valor__ y juegas de forma __presencial__.");
+    }, 1000);   
 });
 
 bot.on('message', (message) => {
