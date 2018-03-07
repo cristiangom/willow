@@ -28,7 +28,10 @@ bot.on('message', (message) => {
         }
     
     
-   if(message.member.roles.some(r=>["Articuno", "Zapdos","Moltres","Suicune","Raikou","Entei"].includes(r.name)) ) {
+    
+        try {
+
+            if(message.member.roles.some(r=>["Articuno", "Zapdos","Moltres","Suicune","Raikou","Entei"].includes(r.name)) ) {
                 //Pues no se me ocurrio nada mas
             } else {
 
@@ -82,96 +85,96 @@ bot.on('message', (message) => {
 
                 }
             }
-         
-        
-        
-        if(message.content == ".exParqueAra" && !message.member.roles.some(r=>["ex-Ara"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-parque-ara');
-            var role = message.member.guild.roles.find('name','ex-Ara');    
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+
+
+                if(message.content == ".exParqueAra" && !message.member.roles.some(r=>["ex-Ara"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-parque-ara');
+                    var role = message.member.guild.roles.find('name','ex-Ara');    
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exAlamedaNorte" && !message.member.roles.some(r=>["ex-AlamedaNte"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-alameda-norte');
+                    var role = message.member.guild.roles.find('name','ex-AlamedaNte');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exAlfalfares" && !message.member.roles.some(r=>["ex-Alfalfares"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-alfalfares');
+                    var role = message.member.guild.roles.find('name','ex-Alfalfares');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exAstaBandera" && !message.member.roles.some(r=>["ex-Asta"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-asta-bandera');
+                    var role = message.member.guild.roles.find('name','ex-Asta');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exDamianCarmona" && !message.member.roles.some(r=>["ex-DamianC"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-Damian-Carmona');
+                    var role = message.member.guild.roles.find('name','ex-DamianC');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exEuphoriaSymmetrica" && !message.member.roles.some(r=>["ex-Euphoria"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-euphoria-simmetryca');
+                    var role = message.member.guild.roles.find('name','ex-Euphoria');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exFelipeCarrillo" && !message.member.roles.some(r=>["ex-Carrillo"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-felipe-carrillo');
+                    var role = message.member.guild.roles.find('name','ex-Carrillo');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exFuenteAzul" && !message.member.roles.some(r=>["ex-FuenteAzul"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-fuente-azul');
+                    var role = message.member.guild.roles.find('name','ex-FuenteAzul');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exFuenteBarco" && !message.member.roles.some(r=>["ex-FuenteBarco"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-fuente-del-barco');
+                    var role = message.member.guild.roles.find('name','ex-FuenteBarco');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exMuralEspacial" && !message.member.roles.some(r=>["ex-MuralEsp"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-mural-espacial');
+                    var role = message.member.guild.roles.find('name','ex-MuralEsp');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exPlaygroud" && !message.member.roles.some(r=>["ex-Playgroud"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-playgroud');
+                    var role = message.member.guild.roles.find('name','ex-Playgroud');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exSantaMaría" && !message.member.roles.some(r=>["ex-SantaMaria"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-santa-maria');
+                    var role = message.member.guild.roles.find('name','ex-SantaMaria');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+                if(message.content == ".exSantaRosa" && !message.member.roles.some(r=>["ex-SantaRosa"].includes(r.name) )){
+                    var grupo = message.member.guild.channels.find('name','ex-santa-rosa');
+                    var role = message.member.guild.roles.find('name','ex-SantaRosa');
+                    message.member.addRole(role);
+                    message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
+                }
+
+
+
+        } catch (e) {
+            console.error(e);
         }
-        if(message.content == ".exAlamedaNorte" && !message.member.roles.some(r=>["ex-AlamedaNte"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-alameda-norte');
-            var role = message.member.guild.roles.find('name','ex-AlamedaNte');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exAlfalfares" && !message.member.roles.some(r=>["ex-Alfalfares"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-alfalfares');
-            var role = message.member.guild.roles.find('name','ex-Alfalfares');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exAstaBandera" && !message.member.roles.some(r=>["ex-Asta"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-asta-bandera');
-            var role = message.member.guild.roles.find('name','ex-Asta');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exDamianCarmona" && !message.member.roles.some(r=>["ex-DamianC"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-Damian-Carmona');
-            var role = message.member.guild.roles.find('name','ex-DamianC');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exEuphoriaSymmetrica" && !message.member.roles.some(r=>["ex-Euphoria"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-euphoria-simmetryca');
-            var role = message.member.guild.roles.find('name','ex-Euphoria');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exFelipeCarrillo" && !message.member.roles.some(r=>["ex-Carrillo"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-felipe-carrillo');
-            var role = message.member.guild.roles.find('name','ex-Carrillo');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exFuenteAzul" && !message.member.roles.some(r=>["ex-FuenteAzul"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-fuente-azul');
-            var role = message.member.guild.roles.find('name','ex-FuenteAzul');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exFuenteBarco" && !message.member.roles.some(r=>["ex-FuenteBarco"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-fuente-del-barco');
-            var role = message.member.guild.roles.find('name','ex-FuenteBarco');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exMuralEspacial" && !message.member.roles.some(r=>["ex-MuralEsp"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-mural-espacial');
-            var role = message.member.guild.roles.find('name','ex-MuralEsp');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exPlaygroud" && !message.member.roles.some(r=>["ex-Playgroud"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-playgroud');
-            var role = message.member.guild.roles.find('name','ex-Playgroud');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exSantaMaría" && !message.member.roles.some(r=>["ex-SantaMaria"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-santa-maria');
-            var role = message.member.guild.roles.find('name','ex-SantaMaria');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        if(message.content == ".exSantaRosa" && !message.member.roles.some(r=>["ex-SantaRosa"].includes(r.name) )){
-            var grupo = message.member.guild.channels.find('name','ex-santa-rosa');
-            var role = message.member.guild.roles.find('name','ex-SantaRosa');
-            message.member.addRole(role);
-            message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-        }
-        
- 
-    
-    } catch (e) {
-        console.error(e);
-    }
-   
-     }, 500);   
+
+    }, 500);   
 });
+
 
 
 bot.login(process.env.BOT_TOKEN);
