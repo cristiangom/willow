@@ -29,6 +29,19 @@ bot.on('message', (message) => {
         if (message.content == '.sasugo'){
                message.author.send('Felicidades ' + message.member.user +  ', el servidor de PokémonGO-Querétaro te felicita en especial los administradores. Eres una gran persona para esta comunidad y para la amistad de tantos años. Te mandamos un fuerte abrazo y esperamos que sigan pasando los años.');
         }
+        if(message.channel.id == 415945665282048002){ //pokemon
+            var palabra = message.content.substr(-40,40);
+            if(palabra == 'https://www.apkmirror.com/apk/gotracker/'){
+                message.delete()
+            }
+        }
+        if(message.channel.id == 415945849605062656){ //incursiones
+            var palabra = message.content.substr(-40,40);
+            if(palabra == 'https://www.apkmirror.com/apk/gotracker/'){
+                message.delete()
+            }
+        }
+    
     
     
     
