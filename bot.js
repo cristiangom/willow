@@ -41,6 +41,12 @@ bot.on('message', (message) => {
                 message.delete()
             }
         }
+        if(message.channel.id == 421040186718420992){ //carrillo
+            var palabra = message.content.substr(-40,40);
+            if(palabra == 'https://www.apkmirror.com/apk/gotracker/'){
+                message.delete()
+            }
+        }
     
     
     
