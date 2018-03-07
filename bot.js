@@ -44,7 +44,6 @@ bot.on('message', (message) => {
     
     
     
-    
         try {
 
             if(message.member.roles.some(r=>["Articuno", "Zapdos","Moltres","Suicune","Raikou","Entei"].includes(r.name)) ) {
