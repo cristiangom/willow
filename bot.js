@@ -84,7 +84,7 @@ bot.on('message', (message) => {
                         message.member.addRole(role).catch(console.error);
                         message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");     
                         const embed = new Discord.RichEmbed().setImage('https://goo.gl/xSnLrx');
-                        message.member.guild.channels.find("name","raikou").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
+                        message.member.guild.channels.find("name","entei").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
 
                 }
             }
