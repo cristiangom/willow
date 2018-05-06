@@ -26,6 +26,66 @@ bot.on('message', (message) => {
         if (message.content == '.oak'){
                message.channel.sendMessage('https://cdn.discordapp.com/attachments/416329673631334429/420420381384638465/tumblr_lj4xh4rZOY1qduaebo1_500.jpg');
         }
+         
+        var silph = message.content.substr(0,8);
+        
+        try{
+        
+         if ('.tarjeta' == silph || '.Tarjeta' == silph){ 
+            
+           var palabra =  message.content.substr(9);
+           var url = 'https://sil.ph/' + palabra +'.json';  
+           var request = require('request');
+            request(url, function (error, response, body) {    
+            
+              var check = body.substr(0,8);
+                
+              if(check != '{\"data\":'){
+                 message.channel.send('Entrenador \"' + palabra + '\" no encontrado');
+              }
+              else{ 
+                  try{
+                  //var card_id = JSON.stringify(texto.data.card_id);
+                  const texto = JSON.parse(body)
+                  var username = JSON.stringify(texto.data.in_game_username).replace(/"/g,"");
+                  var discord = JSON.stringify(texto.data.socials[0].username).replace(/"/g,"");
+                  var level = JSON.stringify(texto.data.trainer_level);
+                  var home_region = JSON.stringify(texto.data.home_region).replace(/"/g,"");
+                  var pokedex = JSON.stringify(texto.data.pokedex_count).replace(/"/g,"");
+                  var imagen_perfil = JSON.stringify(texto.data.avatar).replace(/"/g,"");
+                  var badges = texto.data.badges.length;  
+                  var checkins = texto.data.checkins.length;  
+                  var raids = JSON.stringify(texto.data.raid_average).replace(/"/g,"");
+                  var joined = JSON.stringify(texto.data.joined).replace(/"/g,"").split(" ", 1);
+                  var nests = JSON.stringify(texto.data.nest_migrations).replace(/"/g,"");
+                  var handshakes = JSON.stringify(texto.data.handshakes);
+                  var team = JSON.stringify(texto.data.team).replace(/"/g,"");
+                  if(team == 'Mystic') team = 'Sabiduría';
+                  else if(team == 'Instinct') team = 'Instinto';             
+
+                  console.log('error:', error); // Print the error if one occurred
+                  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+                  //console.log('body:', body); // Print the HTML for the Google homepage. 
+
+                  const embed = new Discord.RichEmbed()
+                    .setThumbnail(imagen_perfil)
+                    .setTitle('Nombre usuario: ' + username)
+                    .setDescription('Cuenta de Discord: ' + discord)
+                    .addField('Ubicación: ', home_region)
+                    .addField('Estadísticas en Juego', 'Nombre: ' + username + '\nEquipo: ' + team + '\nNivel: ' + level + '\nPokedex: ' + pokedex + '\nRaids: ' + raids, true)
+                    .addField('Estadisticas SilphRoad', 'Fecha de Ingreso: ' + joined + '\nMedallas: ' + badges + '\nEventos: ' + checkins + '\nHandshakes: ' + handshakes + '\nNidos registrados: ' + nests , true);
+                  message.channel.send({embed});
+                  }
+                  catch (e) {
+                    console.error(e);
+                  }
+              }
+            });            
+          }
+        
+        } catch (e) {
+            console.error(e);
+        }
         if (message.content == '.sasugo'){
                message.author.send('Felicidades ' + message.member.user +  ', el servidor de PokémonGO-Querétaro te felicita en especial los administradores. Eres una gran persona para esta comunidad y para la amistad de tantos años. Te mandamos un fuerte abrazo y esperamos que sigan pasando los años.');
         }
@@ -195,8 +255,6 @@ bot.on('message', (message) => {
 
     }, 500);   
 });
-
-
 
 bot.login(process.env.BOT_TOKEN);
  
