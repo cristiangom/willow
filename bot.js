@@ -8,7 +8,7 @@ bot.on('ready', () => {
 
 bot.on("guildMemberAdd", (member) => {
     setTimeout(() => { 
-        member.guild.channels.find("name","yo-te-elijo").send("Hola " + member.user + ", bienvenido al servidor de PokémonGO-Querétaro.\nAntes de empezar necesitas elegir a qué facción perteneces de acuerdo a tu forma de juego para ver los demás canales y así empezar tu aventura. Es importante que decidas bien para que puedas aprovechar al máximo el grupo.\nEscribe sin espacios: \n`.soyArticuno` si eres del equipo __Sabiduría__ y juegas de forma __aérea__. \n`.soyZapdos` si eres del equipo __Instinto__ y juegas de forma __aérea__. \n`.soyMoltres` si eres del equipo __Valor__ y juegas de forma __aérea__. \n`.soySuicune` si eres del equipo __Sabiduría__ y juegas de forma __presencial__. \n`.soyRaikou` si eres del equipo __Instinto__ y juegas de forma __presencial__. \n`.soyEntei` si eres del equipo __Valor__ y juegas de forma __presencial__.");
+        member.guild.channels.find("name","yo-te-elijo").send("Hola " + member.user + ", bienvenido al grupo de 'GO QRO'.\nPuedes elegir tu color escribiendo alguno de los comandos sin espacios: \n`.valor` -> si eres de color rojo\n`.sabiduria` -> si eres de color azul \n`.instinto` -> si eres de color amarillo\n```Ejemplo: \n.valor```");
     }, 1000);   
 });
 
@@ -20,9 +20,6 @@ bot.on('message', (message) => {
                 const embed = new Discord.RichEmbed().setImage('https://goo.gl/zmLJ65');
                 message.channel.send("!" + message.member.user + "a", {embed});
         }
-        if (message.content == 'muestrate'){       
-                message.channel.sendMessage('https://gph.is/1UORtsw');           
-        }
         if (message.content == '.oak'){
                message.channel.sendMessage('https://cdn.discordapp.com/attachments/416329673631334429/420420381384638465/tumblr_lj4xh4rZOY1qduaebo1_500.jpg');
         }
@@ -31,7 +28,7 @@ bot.on('message', (message) => {
         
         try{
         
-         if ('.tarjeta' == silph || '.Tarjeta' == silph){ 
+         if (('.tarjeta' == silph || '.Tarjeta' == silph) && message.channel.id == 419649054021255168){ 
             
            var palabra =  message.content.substr(9);
            var url = 'https://sil.ph/' + palabra +'.json';  
@@ -86,10 +83,17 @@ bot.on('message', (message) => {
         } catch (e) {
             console.error(e);
         }
+         
+        var comando = message.content.substr(0,7);         
+        if(comando == '.willow' && message.channel.id == 444637291227512842){
+            var frase =  message.content.substr(8);
+            message.member.guild.channels.find("name","anuncios").send(frase);
+        }
+         
         if (message.content == '.sasugo'){
                message.author.send('Felicidades ' + message.member.user +  ', el servidor de PokémonGO-Querétaro te felicita en especial los administradores. Eres una gran persona para esta comunidad y para la amistad de tantos años. Te mandamos un fuerte abrazo y esperamos que sigan pasando los años.');
         }
-        if(message.channel.id == 415945665282048002){ //pokemon
+        if(message.channel.id == 415945665282048002){ //
             var palabra = message.content.substr(-40,40);
             if(palabra == 'https://www.apkmirror.com/apk/gotracker/'){
                 message.delete()
@@ -112,36 +116,29 @@ bot.on('message', (message) => {
     
         try {
 
-            if(message.member.roles.some(r=>["Articuno", "Zapdos","Moltres","Suicune","Raikou","Entei"].includes(r.name)) ) {
+            if(message.member.roles.some(r=>["Valor","Sabiduria","Instinto"].includes(r.name)) ) {
                 //Pues no se me ocurrio nada mas
             } else {
 
                 var reglamento = message.member.guild.channels.find('name','reglamento');
 
-                if (message.content == '.soyArticuno'){
-                        var role = message.member.guild.roles.find('name','Articuno');    
+                if (message.content == '.valor' || message.content == '.Valor' || message.content == '. valor' || message.content == '. Valor'){
+                        var role = message.member.guild.roles.find('name','Valor');    
                         message.member.addRole(role);
-                        message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");
-                        var embed = new Discord.RichEmbed().setImage('https://goo.gl/EtTg7v');
-                        message.member.guild.channels.find("name","articuno").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});                   
-
+                        message.member.guild.channels.find("name","chat-general").send("!Bienvenido " + message.member.user + " al chat general!. Conoce otras personas que juegan Pokémon Go. Recuerda leer el " + reglamento + " para evitar sanciones.");                
                 }        
-                 if (message.content == '.soyZapdos'){
-                        var role = message.member.guild.roles.find('name','Zapdos');
+                 if (message.content == '.instinto' || message.content == '. instinto' || message.content == '. Instinto' || message.content == '.Instinto'){
+                        var role = message.member.guild.roles.find('name','Instinto');
                         message.member.addRole(role).catch(console.error);
-                        message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");
-                        var embed = new Discord.RichEmbed().setImage('https://goo.gl/1G7K5v');
-                        message.member.guild.channels.find("name","zapdos").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
+                        message.member.guild.channels.find("name","chat-general").send("!Bienvenido " + message.member.user + " al chat general!. Conoce otras personas que juegan Pokémon Go. Recuerda leer el " + reglamento + " para evitar sanciones.");
 
                 }
-                if (message.content == '.soyMoltres'){
-                        var role = message.member.guild.roles.find('name','Moltres');
+                if (message.content == '.sabiduria' || message.content == '.Sabiduria' || message.content == '. sabiduria' || message.content == '. Sabiduria' || message.content == '.sabiduría' || message.content == '. sabiduría' || message.content == '. Sabiduría'){
+                        var role = message.member.guild.roles.find('name','Sabiduria');
                         message.member.addRole(role).catch(console.error);
-                        message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   
-                        const embed = new Discord.RichEmbed().setImage('https://goo.gl/QipBbi');
-                        message.member.guild.channels.find("name","moltres").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
+                        message.member.guild.channels.find("name","chat-general").send("!Bienvenido " + message.member.user + " al chat general!. Conoce otras personas que juegan Pokémon Go. Recuerda leer el " + reglamento + " para evitar sanciones.");   
                 }
-                if (message.content == '.soySuicune'){
+                /*if (message.content == '.soySuicune'){
                         var role = message.member.guild.roles.find('name','Suicune');
                         message.member.addRole(role).catch(console.error);
                         message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");    
@@ -164,11 +161,11 @@ bot.on('message', (message) => {
                         const embed = new Discord.RichEmbed().setImage('https://goo.gl/xSnLrx');
                         message.member.guild.channels.find("name","entei").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
 
-                }
+                }*/
             }
 
 
-                if(message.content == ".exParqueAra" && !message.member.roles.some(r=>["ex-Ara"].includes(r.name) )){
+                /*if(message.content == ".exParqueAra" && !message.member.roles.some(r=>["ex-Ara"].includes(r.name) )){
                     var grupo = message.member.guild.channels.find('name','ex-parque-ara');
                     var role = message.member.guild.roles.find('name','ex-Ara');    
                     message.member.addRole(role);
@@ -245,7 +242,7 @@ bot.on('message', (message) => {
                     var role = message.member.guild.roles.find('name','ex-SantaRosa');
                     message.member.addRole(role);
                     message.author.send("Felicidades por tu pase ex " + message.member.user + ", revisa el grupo de la incursión " + grupo);
-                }
+                }*/
 
 
 
